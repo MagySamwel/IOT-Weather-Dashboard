@@ -72,7 +72,7 @@ Follow these steps to deploy the IoT Weather Dashboard to a production environme
 
 1. **Backend**:
    - Push the project to GitHub.
-   - The backend should be deployed on **Render**.
+   - The backend should be deployed on **Railway**.
    - Add environment variables.
 - Make sure your backend server is accessible on a public IP or domain, and configure firewall rules if necessary.
 

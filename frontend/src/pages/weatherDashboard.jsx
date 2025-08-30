@@ -49,7 +49,7 @@ function WeatherDashboard() {
         const fetchWeatherData = async () => {
             try {
                 setLoading(true);
-                const res = await axios.get(`http://localhost:5000/api/weather/current?city=${selectedCity}`);
+                const res = await axios.get(`https://${import.meta.env.VITE_API_URL}/api/weather/current?city=${selectedCity}`);
                 if (res.data.error) {
                     toast.error(res.data.error);
                 }

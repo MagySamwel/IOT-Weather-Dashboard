@@ -29,7 +29,7 @@ function Charts({ selectedCity }) {
     useEffect(() => {
         const fetchForecastData = async () => {
             try {
-                const res = await axios.get(`http://localhost:5000/api/weather/forecast?city=${selectedCity}`);
+                const res = await axios.get(`https://${import.meta.env.VITE_API_URL}/api/weather/forecast?city=${selectedCity}`);
                 setForecastData(res.data.days);
                 setHourlyData(res.data.hours);
                 console.log(res.data);
