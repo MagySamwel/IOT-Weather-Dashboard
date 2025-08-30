@@ -2,6 +2,20 @@
 
 This project is a full-stack IoT Weather Dashboard that visualizes both simulated and real weather data. The backend simulates IoT sensor readings and integrates with public weather APIs to provide comprehensive weather information, which is displayed in a modern React web interface.
 
+## Table of Contents
+
+- [Overview](#weather-dashboard-with-iot-sensor-simulation)
+- [What Can the Dashboard Do?](#what-can-the-dashboard-do)
+- [IoT Sensor Simulation & Public API Integration](#iot-sensor-simulation--public-api-integration)
+- [API Endpoints](#api-endpoints)
+- [User Guide](#user-guide)
+  - [Using Filters](#using-filters)
+  - [Visualizing Data](#visualizing-data)
+- [Setup Instructions](#setup-instructions)
+  - [Prerequisites](#prerequisites)
+  - [Backend Setup](#backend-setup)
+  - [Frontend Setup](#frontend-setup)
+- [Deployment Guide](#deployment-guide)
 
 ### What Can the Dashboard Do?
 - **Display Current Weather:** Shows up-to-date weather information for a selected city, including temperature, humidity, and other key metrics.
@@ -23,14 +37,14 @@ This project is a full-stack IoT Weather Dashboard that visualizes both simulate
 ## API Endpoints
 - GET /current?city=CityName
 
-1. Fetches current weather data for the specified city from the OpenWeatherMap public API.
-2. Simulates sensor data using generateSensorData() and includes it in the response.
-3. Response includes both public API weather data and simulated sensor readings.
+  1. Fetches current weather data for the specified city from the OpenWeatherMap public API.
+  2. Simulates sensor data using generateSensorData() and includes it in the response.
+  3. Response includes both public API weather data and simulated sensor readings.
 - GET /forecast?city=CityName
 
-1. Fetches a 5-day weather forecast for the specified city from the WeatherAPI public API.
-2. For each forecasted hour, simulated sensor data is generated and included.
-3. Response includes daily and hourly forecast data, each with simulated sensor readings.
+  1. Fetches a 5-day weather forecast for the specified city from the WeatherAPI public API.
+  2. For each forecasted hour, simulated sensor data is generated and included.
+  3. Response includes daily and hourly forecast data, each with simulated sensor readings.
 
 ## User Guide
 
@@ -43,8 +57,8 @@ This project is a full-stack IoT Weather Dashboard that visualizes both simulate
 - Current Weather: The dashboard displays current weather conditions and simulated sensor readings for the selected city.
 - Forecast: You’ll see a 5-day forecast with daily summaries and icons.
 - Interactive Charts: Below the forecast, there are charts showing hourly temperature and humidity trends.
-   - - Use the chart filter to switch between temperature and humidity views.
-   - - Hover over chart points to see detailed info, including both API and sensor values.
+    - Use the chart filter to switch between temperature and humidity views.
+    - Hover over chart points to see detailed info, including both API and sensor values.
 ## Setup Instructions
 
 ### Prerequisites
@@ -105,12 +119,3 @@ Follow these steps to deploy the IoT Weather Dashboard to a production environme
    - Upload the code to GitHub.
    - Deploy the frontend to **Vercel**.
 - Configure your frontend to communicate with the backend API (update API URLs if deploying to different domains).
-
-
-## Features
-
-- Real-time weather data from public APIs
-- Simulated IoT sensor data
-- RESTful API endpoints for current and forecast weather
-- Interactive dashboard with charts and filters
-- Modern React-based UI
